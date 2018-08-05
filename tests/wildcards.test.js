@@ -16,7 +16,7 @@ describe("hrouter", () => {
         });
 
         it("should register nested wildcard routes", () => {
-            hrouter("/*/*", jest.fn());
+            hrouter("/fooga/*", jest.fn());
 
             expect(hrouter._routes).toMatchSnapshot();
         });
@@ -30,7 +30,7 @@ describe("hrouter", () => {
         
         it("should register nested wildcard routes w/ multiple callbacks", () => {
             hrouter("/*", jest.fn(), jest.fn(), jest.fn());
-            hrouter("/*/*", jest.fn(), jest.fn());
+            hrouter("/fooga/*", jest.fn(), jest.fn());
     
             expect(hrouter._routes).toMatchSnapshot();
         });
@@ -51,8 +51,8 @@ describe("hrouter", () => {
     
             hrouter("/*", fn);
             hrouter("/fooga", fn);
+            hrouter("/fooga/*", fn);
             hrouter("/fooga/booga", fn);
-            hrouter("/*/*", fn);
     
             hrouter.go("/fooga/booga");
     
