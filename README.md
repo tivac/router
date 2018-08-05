@@ -22,6 +22,7 @@ Or with `require`
 
 ```js
 const hrouter = require("hrouter");
+```
 
 ## API
 
