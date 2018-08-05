@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hrouter should register routes 1`] = `
+Object {
+  "fooga": Object {
+    "fn": [Function],
+  },
+}
+`;
