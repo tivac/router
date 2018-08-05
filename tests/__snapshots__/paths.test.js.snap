@@ -1,9 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hrouter should register routes 1`] = `
+exports[`hrouter paths should match nested routes 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter paths should match simple routes 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter paths should register routes 1`] = `
 Object {
   "fooga": Object {
-    "fn": [Function],
+    "fns": Array [
+      [MockFunction],
+    ],
+  },
+}
+`;
+
+exports[`hrouter paths should register routes w/ multiple callbacks 1`] = `
+Object {
+  "fooga": Object {
+    "fns": Array [
+      [MockFunction],
+      [MockFunction],
+      [MockFunction],
+    ],
   },
 }
 `;

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hrouter wildcards should match nested wildcard routes 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter wildcards should match simple wildcard routes 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter wildcards should register nested wildcard routes 1`] = `
+Object {
+  "*": Object {
+    "*": Object {
+      "fns": Array [
+        [MockFunction],
+      ],
+    },
+  },
+}
+`;
+
+exports[`hrouter wildcards should register nested wildcard routes w/ multiple callbacks 1`] = `
+Object {
+  "*": Object {
+    "*": Object {
+      "fns": Array [
+        [MockFunction],
+        [MockFunction],
+      ],
+    },
+    "fns": Array [
+      [MockFunction],
+      [MockFunction],
+      [MockFunction],
+    ],
+  },
+}
+`;
+
+exports[`hrouter wildcards should register wildcard routes 1`] = `
+Object {
+  "*": Object {
+    "fns": Array [
+      [MockFunction],
+    ],
+  },
+}
+`;
+
+exports[`hrouter wildcards should register wildcard routes w/ multiple callbacks 1`] = `
+Object {
+  "*": Object {
+    "fns": Array [
+      [MockFunction],
+      [MockFunction],
+      [MockFunction],
+    ],
+  },
+}
+`;

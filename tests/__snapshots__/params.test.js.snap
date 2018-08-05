@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hrouter params should match nested parameterized routes 1`] = `
+Array [
+  Array [
+    Object {
+      "params": Object {
+        "booga": "booga",
+        "fooga": "fooga",
+      },
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "params": Object {
+        "booga": "booga",
+        "fooga": "fooga",
+      },
+      "url": "/fooga/booga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter params should match simple parameterized routes 1`] = `
+Array [
+  Array [
+    Object {
+      "params": Object {
+        "fooga": "fooga",
+      },
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+]
+`;
+
+exports[`hrouter params should register nested parameterized routes 1`] = `
+Object {
+  "__param__": Object {
+    "__param__": Object {
+      "fns": Array [
+        [MockFunction],
+      ],
+      "param": "booga",
+    },
+    "param": "fooga",
+  },
+}
+`;
+
+exports[`hrouter params should register nested parameterized routes w/ multiple callbacks 1`] = `
+Object {
+  "__param__": Object {
+    "__param__": Object {
+      "fns": Array [
+        [MockFunction],
+        [MockFunction],
+      ],
+      "param": "booga",
+    },
+    "fns": Array [
+      [MockFunction],
+      [MockFunction],
+      [MockFunction],
+    ],
+    "param": "fooga",
+  },
+}
+`;
+
+exports[`hrouter params should register parameterized routes 1`] = `
+Object {
+  "__param__": Object {
+    "fns": Array [
+      [MockFunction],
+    ],
+    "param": "fooga",
+  },
+}
+`;
+
+exports[`hrouter params should register parameterized routes w/ multiple callbacks 1`] = `
+Object {
+  "__param__": Object {
+    "fns": Array [
+      [MockFunction],
+      [MockFunction],
+      [MockFunction],
+    ],
+    "param": "fooga",
+  },
+}
+`;
