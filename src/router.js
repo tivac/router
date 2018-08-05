@@ -15,19 +15,21 @@ const split = (url) => (
         url.split("/").slice(1) :
         [ url ]);
 
-const router = (route, fn) => {
+const router = (route, ...fns) => {
     const parts = split(route);
     let pointer = router._routes;
     
     parts.forEach((part) => {
+        const param = part.startsWith(":");
         let segment = part;
-        
+
+        // Params are special
+        if(param) {
+           segment = paramKey;
+        }
+
         if(!pointer[segment]) {
-            const param = segment.startsWith(":");
-            
-            // Params are special
             if(param) {
-                segment = paramKey;
                 pointer[segment] = obj({
                     param : part.slice(1),
                 });
@@ -39,7 +41,9 @@ const router = (route, fn) => {
         pointer = pointer[segment];
     });
     
-    pointer.fn = fn;
+    pointer.fns = fns;
+
+    return router;
 };
 
 router._routes = Object.create(null);
@@ -50,6 +54,8 @@ router._unknown = (ctx) => {
 
 router.unknown = (fn) => {
     router._unknown = fn;
+
+    return router;
 };
 
 router.go = (url, cb) => {
@@ -63,7 +69,7 @@ router.go = (url, cb) => {
         
         // Handle wildcards at any level
         if(pointer["*"]) {
-            fns.push(pointer["*"].fn);
+            fns.push(...pointer["*"].fns);
         }
         
         if(!pointer[segment]) {
@@ -93,9 +99,7 @@ router.go = (url, cb) => {
         
         pointer = pointer[segment];
         
-        if(typeof pointer.fn === "function") {
-            fns.push(pointer.fn);
-        }
+        fns.push(...pointer.fns);
 
         return false;
     });
