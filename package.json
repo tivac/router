@@ -33,6 +33,7 @@
     "@tivac/eslint-config": "^2.2.1",
     "eslint": "^5.3.0",
     "jest": "^23.4.2",
+    "jest-runner-eslint": "^0.6.0",
     "rollup": "^0.63.5",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-terser": "^1.0.1",
