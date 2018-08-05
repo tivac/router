@@ -15,9 +15,7 @@
     "clean": "shx rm -rf dist/",
     "lint": "eslint .",
     "release": "npm version -m \"v%s\"",
-    "pretest": "npm run build",
     "test": "jest",
-    "posttest": "npm run lint",
     "preversion": "npm test"
   },
   "keywords": [
