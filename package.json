@@ -1,0 +1,40 @@
+{
+  "name": "hrouter",
+  "version": "1.0.0",
+  "description": "Hashchange routing made tiny and fast",
+  "main": "./dist/hrouter.cjs.js",
+  "module": "./dist/hrouter.esm.js",
+  "browser": "./dist/hrouter.umd.js",
+  "repository": "tivac/hrouter",
+  "bugs": {
+    "url": "https://github.com/tivac/hrouter/issues"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "rollup --config",
+    "clean": "shx rm -rf dist/",
+    "lint": "eslint .",
+    "release": "npm version -m \"v%s\"",
+    "test": "jest",
+    "posttest": "npm run lint",
+    "preversion": "npm test"
+  },
+  "keywords": [
+    "router",
+    "hashchange",
+    "page",
+    "routing",
+    "SPA"
+  ],
+  "author": "Pat Cavit <npm@patcavit.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@tivac/eslint-config": "^2.2.1",
+    "eslint": "^5.3.0",
+    "jest": "^23.4.2",
+    "rollup": "^0.63.5",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-terser": "^1.0.1",
+    "shx": "^0.3.2"
+  }
+}
