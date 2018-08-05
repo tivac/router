@@ -65,8 +65,8 @@ router.go = (url, cb) => {
     let pointer = router._routes;
     
     parts.some((part) => {
-        let segment = part || "/";
-        
+        let segment = part;
+
         // Handle wildcards at any level
         if(pointer["*"]) {
             fns.push(...pointer["*"].fns);
@@ -108,7 +108,7 @@ router.go = (url, cb) => {
     const limit = fns.length - 1;
     const ctx = obj({ url });
     let idx = -1;
-    
+
     const next = () => {
         if(idx + 1 > limit) {
             return typeof cb === "function" ? cb(ctx) : true;
