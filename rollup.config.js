@@ -32,8 +32,8 @@ module.exports = [
         },
 
         plugins : [
-            require("rollup-plugin-terser")(),
-            require("rollup-plugin-buble"),
+            require("rollup-plugin-terser").terser(),
+            require("rollup-plugin-buble")(),
         ],
     },
 ];
