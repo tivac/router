@@ -12,16 +12,6 @@ Array [
     },
     [Function],
   ],
-  Array [
-    Object {
-      "params": Object {
-        "booga": "booga",
-        "fooga": "fooga",
-      },
-      "url": "/fooga/booga",
-    },
-    [Function],
-  ],
 ]
 `;
 

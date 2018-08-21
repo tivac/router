@@ -64,7 +64,7 @@ router.go = (url, cb) => {
     
     let pointer = router._routes;
     
-    parts.some((part) => {
+    parts.some((part, idx) => {
         let segment = part;
 
         // Handle wildcards at any level
@@ -99,7 +99,10 @@ router.go = (url, cb) => {
         
         pointer = pointer[segment];
         
-        fns.push(...pointer.fns);
+        // Only push segment matches if we're at the leaf
+        if(idx === parts.length - 1) {
+            fns.push(...pointer.fns);
+        }
 
         return false;
     });
