@@ -31,15 +31,15 @@
   "devDependencies": {
     "@tivac/eslint-config": "^2.2.1",
     "babel-core": "^6.26.3",
-    "babel-jest": "^23.4.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "eslint": "^5.3.0",
-    "jest": "^23.4.2",
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0",
     "jest-runner-eslint": "^0.6.0",
-    "rollup": "^0.63.5",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-terser": "^1.0.1",
+    "rollup": "^0.66.6",
+    "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-terser": "^3.0.0",
     "shx": "^0.3.2"
   }
 }
