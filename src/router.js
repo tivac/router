@@ -13,7 +13,8 @@ const obj = (args) => {
 const split = (url) => (
     url.includes("/") ?
         url.split("/").slice(1) :
-        [ url ]);
+        [ url ]
+);
 
 const router = (route, ...fns) => {
     const parts = split(route);
