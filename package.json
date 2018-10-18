@@ -1,13 +1,13 @@
 {
-  "name": "hrouter",
+  "name": "@tivac/router",
   "version": "1.0.0",
   "description": "Hashchange routing made tiny and fast",
-  "main": "./dist/hrouter.cjs.js",
-  "module": "./dist/hrouter.esm.js",
-  "browser": "./dist/hrouter.umd.js",
-  "repository": "tivac/hrouter",
+  "main": "./dist/router.cjs.js",
+  "module": "./dist/router.esm.js",
+  "browser": "./dist/router.umd.js",
+  "repository": "tivac/router",
   "bugs": {
-    "url": "https://github.com/tivac/hrouter/issues"
+    "url": "https://github.com/tivac/router/issues"
   },
   "scripts": {
     "prebuild": "npm run clean",
