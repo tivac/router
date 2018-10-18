@@ -15,8 +15,9 @@
     "clean": "shx rm -rf dist/",
     "lint": "eslint .",
     "release": "npm version -m \"v%s\"",
-    "test": "jest",
-    "preversion": "npm test"
+    "preversion": "npm test",
+    "version": "npm run build && git add -A ./dist",
+    "test": "jest"
   },
   "keywords": [
     "router",
