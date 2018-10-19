@@ -1,6 +1,6 @@
 {
   "name": "@tivac/router",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Hashchange routing made tiny and fast",
   "main": "./dist/router.cjs.js",
   "module": "./dist/router.esm.js",
