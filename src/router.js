@@ -64,6 +64,7 @@ router.go = (url, cb) => {
     const fns = [];
     
     let pointer = router._routes;
+    let unknown;
     
     parts.some((part, idx) => {
         let segment = part;
@@ -90,10 +91,9 @@ router.go = (url, cb) => {
                     return next();
                 });
             } else {
-                // Replace all functions
-                fns.splice(0, fns.length - 1, router._unknown);
+                // Unknown path, flag it and bail on iteration
+                unknown = router._unknown;
                 
-                // Stop iteration
                 return true;
             }
         }
@@ -108,9 +108,14 @@ router.go = (url, cb) => {
         return false;
     });
     
+    const ctx = obj({ url });
+
+    if(unknown) {
+        return unknown(ctx);
+    }
+    
     // Prepare for iterating the chained functions representing this URL
     const limit = fns.length - 1;
-    const ctx = obj({ url });
     let idx = -1;
 
     const next = () => {

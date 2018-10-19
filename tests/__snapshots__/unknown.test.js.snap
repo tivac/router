@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`router router.unknown should allow providing a new unknown handler 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/wooga",
+    },
+  ],
+]
+`;
+
+exports[`router router.unknown should throw an error by default 1`] = `"Unknown path: /wooga"`;
