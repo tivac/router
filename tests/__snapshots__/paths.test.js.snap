@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`router paths should call all the callbacks for each route 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+]
+`;
+
 exports[`router paths should match nested routes 1`] = `
 Array [
   Array [

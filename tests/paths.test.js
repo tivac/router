@@ -20,6 +20,16 @@ describe("router", () => {
             expect(router._routes).toMatchSnapshot();
         });
 
+        it("should call all the callbacks for each route", () => {
+            const fn = jest.fn((ctx, next) => next());
+
+            router("/fooga", fn, fn, fn);
+
+            router.go("/fooga");
+
+            expect(fn.mock.calls).toMatchSnapshot();
+        });
+
         it("should match simple routes", () => {
             const fn = jest.fn((ctx, next) => next());
 
