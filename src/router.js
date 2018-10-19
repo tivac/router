@@ -47,6 +47,8 @@ const router = (route, ...fns) => {
     return router;
 };
 
+router.version = "VERSION";
+
 router._routes = obj();
 
 router._unknown = (ctx) => {

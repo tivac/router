@@ -18,6 +18,12 @@ module.exports = [
             format    : "es",
             sourcemap : true,
         }],
+
+        plugins : [
+            require("rollup-plugin-replace")({
+                VERSION : pkg.version,
+            }),
+        ],
     },
 
     // browser UMD build
@@ -32,6 +38,9 @@ module.exports = [
         },
 
         plugins : [
+            require("rollup-plugin-replace")({
+                VERSION : pkg.version,
+            }),
             require("rollup-plugin-terser").terser(),
             require("rollup-plugin-buble")(),
         ],
