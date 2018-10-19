@@ -47,7 +47,7 @@ const router = (route, ...fns) => {
     return router;
 };
 
-router._routes = Object.create(null);
+router._routes = obj();
 
 router._unknown = (ctx) => {
     throw new Error(`Unknown path: ${ctx.url}`);
