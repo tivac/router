@@ -32,6 +32,8 @@ Create a route mapping `path` to `callback`. See [Route Callbacks](#route-callba
 
 Returns the same `router` instance for optional chaining.
 
+`path` supports `/:params` as well as `*` or `/path/*` style wildcards. No regex stuff though.
+
 ### `router.go(path, fn)`
 
 Begin route matching for a path. `fn` will be called when all matched route handlers are complete.
