@@ -1,31 +1,31 @@
 "use strict";
 
-const hrouter = require("../src/router.js");
+const router = require("../src/router.js");
 
-describe("hrouter", () => {
+describe("router", () => {
     beforeEach(() => {
-        hrouter._routes = Object.create(null);
+        router._routes = Object.create(null);
     });
 
     describe("paths", () => {
         it("should register routes", () => {
-            hrouter("/fooga", jest.fn());
+            router("/fooga", jest.fn());
 
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
 
         it("should register routes w/ multiple callbacks", () => {
-            hrouter("/fooga", jest.fn(), jest.fn(), jest.fn());
+            router("/fooga", jest.fn(), jest.fn(), jest.fn());
 
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
 
         it("should match simple routes", () => {
             const fn = jest.fn((ctx, next) => next());
 
-            hrouter("/fooga", fn);
+            router("/fooga", fn);
 
-            hrouter.go("/fooga");
+            router.go("/fooga");
 
             expect(fn.mock.calls).toMatchSnapshot();
         });
@@ -33,10 +33,21 @@ describe("hrouter", () => {
         it("should match nested routes", () => {
             const fn = jest.fn((ctx, next) => next());
 
-            hrouter("/fooga", fn);
-            hrouter("/fooga/booga", fn);
+            router("/fooga", fn);
+            router("/fooga/booga", fn);
 
-            hrouter.go("/fooga/booga");
+            router.go("/fooga/booga");
+
+            expect(fn.mock.calls).toMatchSnapshot();
+        });
+
+        it("should stop at the right time", () => {
+            const fn = jest.fn((ctx, next) => next());
+
+            router("/fooga", fn);
+            router("/fooga/booga", fn);
+
+            router.go("/fooga");
 
             expect(fn.mock.calls).toMatchSnapshot();
         });

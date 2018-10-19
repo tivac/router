@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hrouter params should match nested parameterized routes 1`] = `
+exports[`router params should match nested parameterized routes 1`] = `
 Array [
   Array [
     Object {
@@ -15,7 +15,7 @@ Array [
 ]
 `;
 
-exports[`hrouter params should match simple parameterized routes 1`] = `
+exports[`router params should match simple parameterized routes 1`] = `
 Array [
   Array [
     Object {
@@ -29,7 +29,7 @@ Array [
 ]
 `;
 
-exports[`hrouter params should register nested parameterized routes 1`] = `
+exports[`router params should register nested parameterized routes 1`] = `
 Object {
   "__param__": Object {
     "__param__": Object {
@@ -43,7 +43,7 @@ Object {
 }
 `;
 
-exports[`hrouter params should register nested parameterized routes w/ multiple callbacks 1`] = `
+exports[`router params should register nested parameterized routes w/ multiple callbacks 1`] = `
 Object {
   "__param__": Object {
     "__param__": Object {
@@ -63,7 +63,7 @@ Object {
 }
 `;
 
-exports[`hrouter params should register parameterized routes 1`] = `
+exports[`router params should register parameterized routes 1`] = `
 Object {
   "__param__": Object {
     "fns": Array [
@@ -74,7 +74,7 @@ Object {
 }
 `;
 
-exports[`hrouter params should register parameterized routes w/ multiple callbacks 1`] = `
+exports[`router params should register parameterized routes w/ multiple callbacks 1`] = `
 Object {
   "__param__": Object {
     "fns": Array [

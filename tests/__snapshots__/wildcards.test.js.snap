@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hrouter wildcards should match nested wildcard routes 1`] = `
+exports[`router wildcards should match nested wildcard routes 1`] = `
 Array [
   Array [
     Object {
@@ -23,7 +23,7 @@ Array [
 ]
 `;
 
-exports[`hrouter wildcards should match simple wildcard routes 1`] = `
+exports[`router wildcards should match simple wildcard routes 1`] = `
 Array [
   Array [
     Object {
@@ -40,7 +40,7 @@ Array [
 ]
 `;
 
-exports[`hrouter wildcards should register nested wildcard routes 1`] = `
+exports[`router wildcards should register nested wildcard routes 1`] = `
 Object {
   "fooga": Object {
     "*": Object {
@@ -52,7 +52,7 @@ Object {
 }
 `;
 
-exports[`hrouter wildcards should register nested wildcard routes w/ multiple callbacks 1`] = `
+exports[`router wildcards should register nested wildcard routes w/ multiple callbacks 1`] = `
 Object {
   "*": Object {
     "fns": Array [
@@ -72,7 +72,7 @@ Object {
 }
 `;
 
-exports[`hrouter wildcards should register wildcard routes 1`] = `
+exports[`router wildcards should register wildcard routes 1`] = `
 Object {
   "*": Object {
     "fns": Array [
@@ -82,7 +82,7 @@ Object {
 }
 `;
 
-exports[`hrouter wildcards should register wildcard routes w/ multiple callbacks 1`] = `
+exports[`router wildcards should register wildcard routes w/ multiple callbacks 1`] = `
 Object {
   "*": Object {
     "fns": Array [

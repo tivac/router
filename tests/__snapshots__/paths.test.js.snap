@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hrouter paths should match nested routes 1`] = `
+exports[`router paths should match nested routes 1`] = `
 Array [
   Array [
     Object {
@@ -11,7 +11,7 @@ Array [
 ]
 `;
 
-exports[`hrouter paths should match simple routes 1`] = `
+exports[`router paths should match simple routes 1`] = `
 Array [
   Array [
     Object {
@@ -22,7 +22,7 @@ Array [
 ]
 `;
 
-exports[`hrouter paths should register routes 1`] = `
+exports[`router paths should register routes 1`] = `
 Object {
   "fooga": Object {
     "fns": Array [
@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`hrouter paths should register routes w/ multiple callbacks 1`] = `
+exports[`router paths should register routes w/ multiple callbacks 1`] = `
 Object {
   "fooga": Object {
     "fns": Array [
@@ -42,4 +42,15 @@ Object {
     ],
   },
 }
+`;
+
+exports[`router paths should stop at the right time 1`] = `
+Array [
+  Array [
+    Object {
+      "url": "/fooga",
+    },
+    [Function],
+  ],
+]
 `;

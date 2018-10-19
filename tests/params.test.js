@@ -1,44 +1,44 @@
 "use strict";
 
-const hrouter = require("../src/router.js");
+const router = require("../src/router.js");
 
-describe("hrouter", () => {
+describe("router", () => {
     beforeEach(() => {
-        hrouter._routes = Object.create(null);
+        router._routes = Object.create(null);
     });
 
     describe("params", () => {
         it("should register parameterized routes", () => {
-            hrouter("/:fooga", jest.fn());
+            router("/:fooga", jest.fn());
     
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
 
         it("should register nested parameterized routes", () => {
-            hrouter("/:fooga/:booga", jest.fn());
+            router("/:fooga/:booga", jest.fn());
 
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
         
         it("should register parameterized routes w/ multiple callbacks", () => {
-            hrouter("/:fooga", jest.fn(), jest.fn(), jest.fn());
+            router("/:fooga", jest.fn(), jest.fn(), jest.fn());
     
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
         
         it("should register nested parameterized routes w/ multiple callbacks", () => {
-            hrouter("/:fooga", jest.fn(), jest.fn(), jest.fn());
-            hrouter("/:fooga/:booga", jest.fn(), jest.fn());
+            router("/:fooga", jest.fn(), jest.fn(), jest.fn());
+            router("/:fooga/:booga", jest.fn(), jest.fn());
     
-            expect(hrouter._routes).toMatchSnapshot();
+            expect(router._routes).toMatchSnapshot();
         });
     
         it("should match simple parameterized routes", () => {
             const fn = jest.fn((ctx, next) => next());
     
-            hrouter("/:fooga", fn);
+            router("/:fooga", fn);
     
-            hrouter.go("/fooga");
+            router.go("/fooga");
     
             expect(fn.mock.calls).toMatchSnapshot();
         });
@@ -46,10 +46,10 @@ describe("hrouter", () => {
         it("should match nested parameterized routes", () => {
             const fn = jest.fn((ctx, next) => next());
     
-            hrouter("/:fooga", fn);
-            hrouter("/:fooga/:booga", fn);
+            router("/:fooga", fn);
+            router("/:fooga/:booga", fn);
     
-            hrouter.go("/fooga/booga");
+            router.go("/fooga/booga");
     
             expect(fn.mock.calls).toMatchSnapshot();
         });
